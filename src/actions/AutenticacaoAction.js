@@ -10,9 +10,7 @@ import {
     CADASTRO_ESTABELECIMENTO_ERRO,
     MODIFICA_ID,
     EDITA_ESTABELECIMENTO,
-    EDITA_SUCESSO
-
-   
+    EDITA_SUCESSO  
 } from './types';
 
 const baseUrl = 'http://192.168.0.25:3001/api/estabelecimentos';

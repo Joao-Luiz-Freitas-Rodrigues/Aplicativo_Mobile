@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { Alert, View, TouchableOpacity, TextInput, Text,AsyncStorage, StyleSheet, ScrollView } from 'react-native';
+import { View, TouchableOpacity, Text,AsyncStorage, StyleSheet, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import { Actions } from 'react-native-router-flux';
-import { connect } from 'react-redux';
 import Estabelecimentos from './Estabelecimentos';
 
-import api from '../services/api';
 import axios from 'axios';
 const baseUrl = 'http://192.168.0.25:3001/api/estabelecimentos';
 
@@ -18,40 +16,43 @@ export default class Consulta extends Component {
         this.state = { listaEstabelecimentos: []}
     }
 
-    consulta = async () => {
-        console.log('entrou na funcao consulta');
+    //------------ INICIEI AQUI UMA AUTENTICAÇÃO POR TOKEN JWT PORÉM NÃO TIVE TEMPO SUFICIENTE ----
+   
+   
+    // consulta = async () => {
+    //     console.log('entrou na funcao consulta');
 
-        try{
+    //     try{
 
 
-            const tk = await AsyncStorage.getItem('@CodeApi:token');
+    //         const tk = await AsyncStorage.getItem('@CodeApi:token');
 
-            const token = JSON.parse(tk);
-            console.log(token.token);
+    //         const token = JSON.parse(tk);
+    //         console.log(token.token);
             
 
-            const config = {
-                headers:{
-                    'Authorization': "bearer " + token.token
-                }
-            };
-            const body = {
+    //         const config = {
+    //             headers:{
+    //                 'Authorization': "bearer " + token.token
+    //             }
+    //         };
+    //         const body = {
                
-            }
+    //         }
 
            
             
-            const response = await api.get('/wathers',body, config);
-            console.log(response.data.data);
+    //         const response = await api.get('/wathers',body, config);
+    //         console.log(response.data.data);
             
-            this.setState({lista: response.data.data})
-        }catch(response){
-            console.log(response);
+    //         this.setState({lista: response.data.data})
+    //     }catch(response){
+    //         console.log(response);
             
-            Alert.alert('Erro na consulta!');
-        }
+    //         Alert.alert('Erro na consulta!');
+    //     }
         
-    }
+    // }
 
     componentWillMount(){
     //requisição

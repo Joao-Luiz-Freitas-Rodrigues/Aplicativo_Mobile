@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Alert, View, TouchableOpacity, TextInput, Text,AsyncStorage, StyleSheet, ScrollView } from 'react-native';
+import { View, TouchableOpacity,  Text, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { connect } from 'react-redux';
 

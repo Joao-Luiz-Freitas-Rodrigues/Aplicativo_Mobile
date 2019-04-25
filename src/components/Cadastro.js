@@ -1,14 +1,7 @@
 import React, { Component } from 'react';
-import { Alert, View, TouchableOpacity, TextInput, Text, AsyncStorage, StyleSheet } from 'react-native';
+import {  View, TouchableOpacity, TextInput, Text, StyleSheet } from 'react-native';
 
-import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import Icon from 'react-native-vector-icons/AntDesign';
-
-
-
-import api from '../services/api';
-
 import {modificaNome, modificaEndereco,cadastraEstabelecimento} from '../actions/AutenticacaoAction';
 
 export  class Cadastra extends Component {

@@ -26,5 +26,4 @@ const css = StyleSheet.create({
     flex: 1,
     
   }
-
 });

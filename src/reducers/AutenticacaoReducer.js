@@ -1,3 +1,4 @@
+
 import {
 
     MODIFICA_EMAIL,
@@ -10,10 +11,6 @@ import {
     MODIFICA_ID,
     EDITA_ESTABELECIMENTO,
     EDITA_SUCESSO
-
-
-
-
 } from '../actions/types';
 
 const INITIAL_STATE = {

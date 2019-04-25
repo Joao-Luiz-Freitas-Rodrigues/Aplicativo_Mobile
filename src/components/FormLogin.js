@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, TextInput, Text, TouchableOpacity, AsyncStorage, Alert } from 'react-native';
+import { View, StyleSheet,  TextInput, Text, TouchableOpacity } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/AntDesign';
-
-
-
-import api from '../services/api';
 
 import {modificaEmail, modificaPassword} from '../actions/AutenticacaoAction';
 

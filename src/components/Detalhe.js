@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {View, TextInput,TouchableOpacity, StyleSheet, Text, Alert} from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
 import { connect } from 'react-redux';
 import {modificaId, removeEstabelecimento,editaEstabelecimento,modificaNome,modificaEndereco} from '../actions/AutenticacaoAction';
 import geolib from 'geolib'
@@ -61,12 +60,6 @@ export  class Detalhe extends Component {
                     <Text style={css.txtBtn}>Atualizar</Text>
                 </TouchableOpacity>
 
-                {/* <TouchableOpacity onPress={() => this.findCoordinates() }>
-                    <Text>localizar</Text>
-                </TouchableOpacity> */}
-{/* 
-                <Text>{ this.props.nome} </Text>
-                <Text>{ this.props.endereco} </Text> */}
             </View>
             
 
