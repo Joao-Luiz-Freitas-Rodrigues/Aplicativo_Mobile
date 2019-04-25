@@ -38,7 +38,7 @@ export  class Cadastra extends Component {
                 />
                  <TextInput 
                     style={css.txtInput}
-                    value={this.props.endereco}
+                    value={this.state.latitude}
 
                     placeholder='Digite a latitude do estabelecimento'
                     onChangeText={latitude => this.setState({latitude})}
@@ -46,10 +46,10 @@ export  class Cadastra extends Component {
                 />
                  <TextInput 
                     style={css.txtInput}
-                    value={this.props.endereco}
+                    value={this.state.longitude}
 
                     placeholder='Digite a longitude do estabelecimento'
-                    onChangeText={longitude => this.props.setState({longitude})}
+                    onChangeText={longitude => this.setState({longitude})}
 
                 />
                
@@ -93,7 +93,8 @@ const css = StyleSheet.create({
     view: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#FFF'
     },
     btn:{
         backgroundColor: '#202830',

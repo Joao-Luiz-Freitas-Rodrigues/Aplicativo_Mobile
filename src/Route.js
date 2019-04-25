@@ -20,7 +20,7 @@ export default class Route extends Component {
                     <Scene key='principal' component={Principal} hideNavBar={true}/>
 
                     <Scene key='remove' component={Remove} />
-                    <Scene key='cadastro' component={Cadastro} title='Cadastro'  />
+                    <Scene key='cadastro' component={Cadastro} title='Cadastrar Estabelecimento'  />
                     <Scene key='consulta' component={Consulta} title='Consulta' hideNavBar={true}/>
                     <Scene key='edita' component={Edita} title='Edição' />
                     <Scene key='detalhe' component={Detalhe} />

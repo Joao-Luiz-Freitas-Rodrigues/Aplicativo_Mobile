@@ -72,31 +72,47 @@ export default class Consulta extends Component {
 // tava sem tempo, essa parte ta meio feia
     render(){
         return(
-            <ScrollView style={css.ScrollView}>
+            <View style={{flex:1}}>
                 <View style={css.viewAdd}>
 
                     <Icon name="plus"size={25} color="blue" />
 
-                    <TouchableOpacity onPress={() => Actions.cadastro()} style={{marginRight: 60}}>
-                        <Text style={css.txtCadastro}>Adcionar Estabelecimento</Text>
+                    <TouchableOpacity onPress={() => Actions.cadastro()} style={{marginRight: 50}}>
+                        <Text style={css.txtCadastro}>Adicionar Estabelecimento</Text>
                     </TouchableOpacity>
-                    
+
                     <TouchableOpacity onPress={() => Actions.formLogin()}>
                         <Icon name="logout"size={25} color="blue" />
 
                     </TouchableOpacity>
 
-                    
-                </View>
-            
-              {this.state.listaEstabelecimentos.map(estabelecimento=>(
-                   <Estabelecimentos key={estabelecimento._id} estabelecimento={estabelecimento}/>
-                    
-                
-              ))}
-           
 
-            </ScrollView>
+                </View>
+                <View style={css.ScrollView}>
+                    <ScrollView style={{flex:1}}>
+                        
+                    
+                        {this.state.listaEstabelecimentos.map(estabelecimento=>(
+                        <Estabelecimentos key={estabelecimento._id} estabelecimento={estabelecimento}/>
+                            
+                        
+                            ))}
+            
+
+                    </ScrollView>
+                </View>
+                
+                
+                
+                <View style={css.viewInfo}>
+                    <Icon name="infocirlceo" size={15} color="grey" style={css.iconInfo}/>
+                    <Text style={css.txtInfo}>
+                         Distâncias em verde estão a menos de 5km.
+                    </Text>
+                       
+                </View>
+            </View>
+            
 
             
         );
@@ -106,7 +122,8 @@ export default class Consulta extends Component {
 const css = StyleSheet.create({
     
 ScrollView:{
-    backgroundColor: '#FFF'
+    backgroundColor: '#FFF',
+    flex: 9
 },
 txtCadastro: {
     color: 'blue',
@@ -115,8 +132,30 @@ txtCadastro: {
 
 },
 viewAdd:{
+    flex: 1,
     flexDirection: 'row',
-    marginTop: 20,
-    marginBottom: 20
+    paddingTop: 20,
+    paddingBottom: 20,
+    alignItems: 'center',
+    backgroundColor:"#ccebff",
+
+},
+viewInfo:{
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor:"#ccebff",
+
+},
+txtInfo:{
+    color: 'grey',
+    paddingLeft: 10,
+    fontWeight: 'bold',
+
+},
+iconInfo:{
+    paddingLeft: 10
 }
+
+
 })

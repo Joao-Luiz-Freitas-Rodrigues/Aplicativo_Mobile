@@ -100,7 +100,9 @@ const css = StyleSheet.create({
     txtInput:{
         backgroundColor:"#ccebff",
         margin: 10,
-        padding: 10
+        padding: 10,
+        borderRadius: 20
+
 
     },
     btnAtualizar:{

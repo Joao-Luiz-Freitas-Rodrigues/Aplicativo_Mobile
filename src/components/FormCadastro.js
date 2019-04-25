@@ -46,7 +46,7 @@ class FormCadastro extends Component {
                 <View style={css.viewBtn} >
                     <TouchableOpacity 
                         style={css.btnCadastrar} 
-                        onPress={() => Actions.formLogin()}
+                        onPress={() => Actions.consulta()}
                     >
                         <Text style={css.txtBtn} >Cadastrar</Text>
                     </TouchableOpacity>
@@ -81,11 +81,13 @@ const css = StyleSheet.create({
     },
     viewCampos: {
         flex: 3,
+        justifyContent: 'center'
        
     },
     txtInput: {
-        backgroundColor: '#85d4fc',
-        fontSize: 20,
+        fontSize: 15,
+        backgroundColor:"#ccebff",
+
         padding: 10,
         margin: 10,
         borderRadius: 20
@@ -103,7 +105,7 @@ const css = StyleSheet.create({
     },
     txtBtn: {
         textAlign: 'center',
-        fontSize: 25,
+        fontSize: 15,
         padding: 10,
         color: '#fff',
         fontWeight: 'bold',

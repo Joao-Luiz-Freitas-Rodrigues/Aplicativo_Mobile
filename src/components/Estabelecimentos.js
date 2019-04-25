@@ -34,12 +34,13 @@ export class Estabelecimentos extends Component {
             this.setState({local})
           },
           // error.message
-          error => Alert.alert("Ative sua localização!"),
+          error => console.log("Ative sua localização!"),
           { enableHighAccuracy: true, timeout: 20000 , maximumAge: 0}
         );
       };
     
     componentWillMount(){
+        // Alert.alert("Não esqueça de ativar sua localização!");
         this.findCoordinates();
     }
 

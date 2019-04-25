@@ -9,7 +9,8 @@ import {
     CADASTRO_ESTABELECIMENTO_SUCESSO,
     CADASTRO_ESTABELECIMENTO_ERRO,
     MODIFICA_ID,
-    EDITA_ESTABELECIMENTO
+    EDITA_ESTABELECIMENTO,
+    EDITA_SUCESSO
 
    
 } from './types';
@@ -105,6 +106,7 @@ export const editaEstabelecimento = (id, nome, endereco) => {
         }).then(res =>{
             console.log(res);
             Alert.alert("Estabelecimento atualizdo com sucesso");  
+            dispatch({type: EDITA_SUCESSO});
             Actions.consulta();
         }).catch(err => {
             console.log(err);
@@ -118,10 +120,10 @@ export const removeEstabelecimento = (id) =>{
     return dispatch => {
         axios.delete(`${baseUrl}/${id}`)
             .then(res =>{
-                Actions.consulta();
-                Actions.pop({ refresh: {key: 'consulta'} })  
 
                 Alert.alert("Registro deletado com sucesso!" );
+                Actions.consulta();
+
             }).catch(err=>{
                 Alert.alert("Algum erro ocorreu");
             })

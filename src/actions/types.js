@@ -8,6 +8,9 @@ export const MODIFICA_NOME = 'modifica_nome';
 export const CADASTRO_ESTABELECIMENTO_SUCESSO = 'cadastro_estabelecimento_sucesso';
 export const CADASTRO_ESTABELECIMENTO_ERRO= 'cadastro_estabelecimento_erro';
 export const EDITA_ESTABELECIMENTO = 'edita_estabelecimento';
+export const EDITA_SUCESSO = 'edita_sucesso';
+
+
 
 
 

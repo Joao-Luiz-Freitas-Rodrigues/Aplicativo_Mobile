@@ -8,7 +8,8 @@ import {
     CADASTRO_ESTABELECIMENTO_SUCESSO,
     CADASTRO_PROCESSANDO,
     MODIFICA_ID,
-    EDITA_ESTABELECIMENTO
+    EDITA_ESTABELECIMENTO,
+    EDITA_SUCESSO
 
 
 
@@ -51,6 +52,8 @@ export default (state = INITIAL_STATE, action) => {
             return{...state, loading_cadastro: true}
         case EDITA_ESTABELECIMENTO:
             return{...state}
+        case EDITA_SUCESSO:
+            return{...state, nome: '', endereco:''}
 
             
         default: 
